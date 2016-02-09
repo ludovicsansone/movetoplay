@@ -1,0 +1,6 @@
+movetoplay.controller('ctrl', ['$scope', function($scope) {
+
+	    $scope.scanner = function() {
+		alert("Bravo, vous avez gagn"");
+	    };
+	}]);
