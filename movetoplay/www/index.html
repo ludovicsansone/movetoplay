@@ -24,23 +24,30 @@
     <!-- your controller -->
     <script src="js/controller.js"></script>
 
+<!-- Your services-->
+<script src="js/services/dataSrv.js"></script>
+
   </head>
 
 
   <body ng-app="movetoplay">
 
     <ion-pane ng-controller="ctrl">
-      <ion-header-bar class="bar-stable">
-	<div>
-	  <img src="img/logo.png" alt="Logo boutique"/>
+      <ion-content>
+	<h1>
+{{title}}
+	</h1>
+	<div style="height: 350px;">
+	<div style="width: {{imgDisplay}}%; overflow: hidden;">
+	  <img ng-click="startGame()" src="{{imgUrl}}" alt="Logo boutique""/>
 	</div>
+</div>
 	<div>
-Trouver cette boutique, puis scanner son QR-Code
+	  {{instruction}}
 	</div>
 	<button ng-click="scanner()">
 	  Scanner le QR-Code
 	</button>
-      <ion-content>
       </ion-content>
     </ion-pane>
   </body>

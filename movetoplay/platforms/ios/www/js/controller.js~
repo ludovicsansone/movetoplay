@@ -1,8 +1,16 @@
 movetoplay.controller('ctrl', ['$scope', function($scope) {
 	    // Données provisoire
-	    var idGame = 1;
-	    var path = "img.png";
+	    var id = 1;
 	    var qrValue = "ludo";
+	    var level = 1;
+
+	    // Initialisation des variables du scope
+	    dataSrv.init($scope.title, $scope.imgUrl, $scope.instruction, $scope.buttonState);
+
+	    $scope.startGame = function() {
+		$scope.instruction = "Déplacez-vous et scannez le QR code pour savoir si vous avez gagné";
+		$scope.imgDisplay = 25;
+	    };
 
 	    // Scanne du QR-Code
 	    $scope.scanner = function() {
