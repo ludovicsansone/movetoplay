@@ -38,12 +38,12 @@
 {{title}}
 	</h1>
 	<div style="height: 350px;">
-	<div style="width: {{imgDisplay}}%; overflow: hidden;">
-	  <img ng-click="startGame()" src="{{imgUrl}}" alt="Logo boutique""/>
+	<div style="width: {{params.imgDisplay}}%; overflow: hidden;">
+	  <img ng-click="startGame()" src="{{params.imgUrl}}" alt="Logo boutique"/>
 	</div>
 </div>
 	<div>
-	  {{instruction}}
+	  {{params.instruction}}
 	</div>
 	<button ng-click="scanner()">
 	  Scanner le QR-Code

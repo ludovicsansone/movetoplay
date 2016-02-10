@@ -1,8 +1,13 @@
 movetoplay.controller('ctrl', ['$scope', 'dataSrv', function($scope, dataSrv) {
 	    // Données de jeu
+
+	   	// Initialisation des variables du scope
+	 
 	    var id = 1;
 	    var imgUrl = "img/logo.png";
 	    var qrValue = "ludo";
+   		
+   		$scope.params = dataSrv.init();
 
 	    // Données de joueur
 	    var level = 1;
@@ -10,15 +15,10 @@ movetoplay.controller('ctrl', ['$scope', 'dataSrv', function($scope, dataSrv) {
 	    // Données de session
 	    var nbParti = 0;
 
-	    // Initialisation des variables du scope
-	    $scope.title = "Trouvez l'image mystère";
-	    $scope.imgUrl = "img/logo.png";
-	    $scope.instruction = "Cliquez sur l'image pour commencer à jouer";
-
 	    // Début de partie
 	    $scope.startGame = function() {
-		$scope.instruction = "Déplacez-vous et scannez le QR code pour savoir si vous avez gagné";
-		$scope.imgDisplay = 25;
+		$scope.params.instruction = "Déplacez-vous et scannez le QR code pour savoir si vous avez gagné";
+		$scope.params.imgDisplay = 25;
 	    };
 
 	    // Scan du QR-Code
