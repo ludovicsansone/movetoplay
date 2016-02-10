@@ -11,7 +11,9 @@ movetoplay.controller('ctrl', ['$scope', 'dataSrv', function($scope, dataSrv) {
 	    var nbParti = 0;
 
 	    // Initialisation des variables du scope
-	    dataSrv.init($scope.title, $scope.imgUrl, $scope.instruction, $scope.buttonState);
+	    $scope.title = "Trouvez l'image mystère";
+	    $scope.imgUrl = "img/logo.png";
+	    $scope.instruction = "Cliquez sur l'image pour commencer à jouer";
 
 	    // Début de partie
 	    $scope.startGame = function() {
