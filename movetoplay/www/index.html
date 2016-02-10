@@ -35,7 +35,7 @@
     <ion-pane ng-controller="ctrl">
       <ion-content>
 	<h1>
-{{title}}
+{{params.title}}
 	</h1>
 	<div style="height: 350px;">
 	<div style="width: {{params.imgDisplay}}%; overflow: hidden;">
@@ -45,7 +45,7 @@
 	<div>
 	  {{params.instruction}}
 	</div>
-	<button ng-click="scanner()">
+	<button ng-click="scanner()" ng-show="scanIsActive">
 	  Scanner le QR-Code
 	</button>
       </ion-content>
