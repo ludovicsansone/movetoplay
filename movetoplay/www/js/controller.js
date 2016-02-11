@@ -1,8 +1,10 @@
 movetoplay.controller('ctrl', ['$scope', '$interval', 'dataSrv', function($scope, $interval, dataSrv) {
 	    // Données de jeu
 	    var nbLoop = 4;
-	    var isClickable = 0;
+	    var isClickable = 1;
 	    var isVictory = 0;
+	    var index = 1;
+	    var timer;
 
 	   	// Initialisation des variables du scope
 	 	$scope.params={};
@@ -17,36 +19,32 @@ movetoplay.controller('ctrl', ['$scope', '$interval', 'dataSrv', function($scope
 
 	    // Début de partie
 	    $scope.startGame = function() {
-	    	if (isClickable == 0)
+	    	if (isClickable == 1)
 	    	{
-	    		isClickable = 1;
-	    		var index = 1;
-	    		isVictory = 0;
-	    		$scope.scanIsActive = true;
 		    	$scope.params.imgUrl = "img/logo.png";
+		    	$scope.params.scanIsActive = true;
+		    	$scope.params.imgDisplay = 100 / nbLoop;
+		    	var index = 0;
 		    	$scope.params.title = "Trouvez l'image mystère autour de vous";
-				$scope.params.instruction = "Déplacez-vous et scannez le QR code pour savoir si vous avez gagné";
-				$scope.params.imgDisplay = 100 / nbLoop;
-					$interval(function() {
-						$scope.params.imgDisplay += 100 / nbLoop;
-						index += 1;
-						if (isVictory == 1)
-						{
-							$interval.cancel();
-						}
-						if (index > 1 && index < nbLoop)
-						{
-							$scope.params.title = "Allez, on vous aide, l'image mystère se dévoile un peu";
-							$scope.params.instruction = "Vous avez trouvé ? Scannez le QR-Code pour savoir si vous avez gagné"
-						}
-						if (index == nbLoop)
-						{
-							$scope.params.title = "Merci d'avoir participé. Voulez-vous rejouer?";
-							$scope.params.instruction = "Pour rééssayer, cliquez sur l'image";
-							$scope.scanIsActive = false;
-							isClickable = 0;
-						}
-					}, 100000 / nbLoop, 100 / nbLoop); // 300000 pour 5 minutes
+				$scope.params.instruction = "Déplacez-vous et scanner le QR-Code pour savoir si vous avez gagné";
+				isClickable = 0;
+				index += 1;
+		    	timer = $interval(function() {	
+		    		if (index == nbLoop - 1)
+		    		{
+		    			$scope.params.title = "Merci d'avoir participé!";
+		    			$scope.params.instruction = "Pour réessayer cliquez sur l’image.";
+		    			$scope.params.scanIsActive = false;
+		    			isClickable = 1;
+		    		}
+		    		else
+		    		{
+		    			$scope.params.title = "Allez, on vous aide!";
+		    			$scope.params.instruction = "Vous avez trouvé ? Scannez le QR-Code pour savoir si vous avez gagné";
+		    		}
+		    		$scope.params.imgDisplay += (100 / nbLoop);
+		    		index++;
+		    	}, 5000, nbLoop - 1);
 	    	}
 	    };
 
@@ -57,16 +55,24 @@ movetoplay.controller('ctrl', ['$scope', '$interval', 'dataSrv', function($scope
 				{
 					if (res.text == qrValue) 
 					{
-						$scope.params.title = "Félicitations! Vous avez gagné!";
+						$interval.cancel(timer);
+						$scope.params.title = "Bravo, vous avez gagné!";
 						$scope.params.instruction = "Vous pouvez aller chercher votre cadeau ! Pour rejouer cliquez sur l’image";
-						$scope.params.imgDisplay = 100;
-						isVictory = 1;
-						isClickable = 0;
-						if (nbLoop < 8)
-							nbLoop += 2;
+						$scope.params.scanIsActive = false;
+		    			$scope.params.imgDisplay = 100;
+		    			isClickable = 1;
+		    			if (nbLoop < 8)
+		    				nbLoop += 2;
 					}
-					else
-				    	alert("Désolé, ce n'est pas la bonne image. Perdu!");
+					else 
+					{
+						$interval.cancel(timer);
+				    	$scope.params.title = "Désolé, ce n'est pas la bonne image. Perdu!";
+				    	$scope.params.instruction = "Pour réessayer cliquez sur l’image.";
+		    			$scope.params.imgDisplay = 100;
+		    			$scope.params.scanIsActive = false;
+		    			isClickable = 1;
+					}
 				}
 				else
 				    alert("Oups, QR-Code non reconnu. Veuillez rééssayer");
