@@ -1,4 +1,4 @@
-movetoplay.controller('ctrl', ['$scope', '$interval', 'dataSrv', function($scope, $interval, dataSrv) {
+movetoplay.controller('ctrl', ['$scope', '$interval', 'dataSrv', 'qrcodeFct', function($scope, $interval, dataSrv, qrcodeFct) {
 	    // Données de jeu
 	    var nbLoop = 4;
 	    var isClickable = 1;
@@ -6,6 +6,7 @@ movetoplay.controller('ctrl', ['$scope', '$interval', 'dataSrv', function($scope
 	    var index = 1;
 	    var timer;
 
+	    $scope.qrcodeFct = qrcodeFct;
 	   	// Initialisation des variables du scope
 	 	$scope.params={};
 
@@ -29,22 +30,23 @@ movetoplay.controller('ctrl', ['$scope', '$interval', 'dataSrv', function($scope
 				$scope.params.instruction = "Déplacez-vous et scanner le QR-Code pour savoir si vous avez gagné";
 				isClickable = 0;
 				index += 1;
-		    	timer = $interval(function() {	
-		    		if (index == nbLoop - 1)
-		    		{
-		    			$scope.params.title = "Merci d'avoir participé!";
-		    			$scope.params.instruction = "Pour réessayer cliquez sur l’image.";
-		    			$scope.params.scanIsActive = false;
-		    			isClickable = 1;
-		    		}
-		    		else
-		    		{
-		    			$scope.params.title = "Allez, on vous aide!";
-		    			$scope.params.instruction = "Vous avez trouvé ? Scannez le QR-Code pour savoir si vous avez gagné";
-		    		}
-		    		$scope.params.imgDisplay += (100 / nbLoop);
-		    		index++;
-		    	}, 5000, nbLoop - 1);
+		    	// timer = $interval(function() {	
+		    	// 	if (index == nbLoop - 1)
+		    	// 	{
+		    	// 		$scope.params.title = "Merci d'avoir participé!";
+		    	// 		$scope.params.instruction = "Pour réessayer cliquez sur l’image.";
+		    	// 		$scope.params.scanIsActive = false;
+		    	// 		isClickable = 1;
+		    	// 	}
+		    	// 	else
+		    	// 	{
+		    	// 		$scope.params.title = "Allez, on vous aide!";
+		    	// 		$scope.params.instruction = "Vous avez trouvé ? Scannez le QR-Code pour savoir si vous avez gagné";
+		    	// 	}
+		    	// 	$scope.params.imgDisplay += (100 / nbLoop);
+		    	// 	index++;
+		    	// }, 5000, nbLoop - 1);
+				$scope.qrcodeFct.scan();
 	    	}
 	    };
 
