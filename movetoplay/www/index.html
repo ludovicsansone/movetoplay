@@ -27,11 +27,12 @@
     <script src="js/controller.js"></script>
 
   <!-- Your services-->
-  <script src="js/services/dataSrv.js"></script>
   <!-- <script src="js/services/qrcodeSrv.js"></script> -->
 
   <!-- Your factories -->
   <script src="js/factories/qrcodeFct.js"></script>
+  <script src="js/factories/gameFct.js"></script>
+   <script src="js/factories/dataFct.js"></script>
   </head>
 
 
@@ -40,17 +41,17 @@
     <ion-pane ng-controller="ctrl">
       <ion-content>
 	<h1>
-{{params.title}}
+{{dataFct.title}}
 	</h1>
 	<div style="height: 350px;">
-	<div style="width: {{params.imgDisplay}}%; overflow: hidden;">
-	  <img ng-click="startGame()" src="{{params.imgUrl}}" alt="Logo boutique"/>
+	<div style="width: {{dataFct.imgDisplay}}%; overflow: hidden;">
+	  <img ng-click="startGame()" src="{{dataFct.imgUrl}}" alt="Logo boutique"/>
 	</div>
 </div>
 	<div>
-	  {{params.instruction}}
+	  {{dataFct.instruction}}
 	</div>
-	<button ng-click="scanner()" ng-show="params.scanIsActive">
+	<button ng-click="scanner()" ng-show="dataFct.scanIsActive">
 	  Scanner le QR-Code
 	</button>
       </ion-content>
