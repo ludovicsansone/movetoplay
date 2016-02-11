@@ -23,6 +23,7 @@ movetoplay.factory('gameFct', function(dataFct, $interval) {
 						dataFct.instruction = "Pour réessayer cliquez sur l’image.";
 						dataFct.scanIsActive = false;
 						dataFct.imgDisplay = 100;
+						dataFct.imgUrl = "img/No.png";
 						dataFct.isClickable = 1;
 					}
 					else

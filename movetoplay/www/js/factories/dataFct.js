@@ -4,7 +4,7 @@ movetoplay.factory('dataFct', function() {
 		'imgUrl': "img/default.png",
 		'imgDisplay': 100,
 		'instruction': "Cliquez sur l'image pour commencer le jeu",
-		'scanIsActive': true,
+		'scanIsActive': false,
 		'qrValue': "ludo",
 		'isClickable': 1
 	}
