@@ -1,6 +1,6 @@
 movetoplay.controller('ctrl', ['$scope', '$interval', 'dataSrv', function($scope, $interval, dataSrv) {
 	    // Données de jeu
-	    
+
 	   	// Initialisation des variables du scope
 	 	$scope.params={};
 
@@ -34,13 +34,18 @@ movetoplay.controller('ctrl', ['$scope', '$interval', 'dataSrv', function($scope
 
 	    // Scan du QR-Code
 	    $scope.scanner = function() {
-		cordova.plugins.barcodeScanner.scan(function(res) {
-			if (res.text == qrValue)
-			    alert("Bravo, un café offert chez Ludo");
-			else
-			    alert("Désolé, ce QR-Code n'est pas le bon");
-		    }, function(res) {
-			alert("Error");
-		    });
+			cordova.plugins.barcodeScanner.scan(function(res) {
+				if (res.text)
+				{
+					if (res.text == qrValue)
+						alert("Félicitations! Vous avez gagné!");
+					else
+				    	alert("Désolé, ce n'est pas la bonne image. Perdu!");
+				}
+				else
+				    alert("Oups, QR-Code non reconnu. Veuillez rééssayer");
+			    }, function(res) {
+				alert("Erreur");
+			});
 	    };
 	}]);
