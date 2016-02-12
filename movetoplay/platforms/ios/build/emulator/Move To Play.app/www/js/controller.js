@@ -1,38 +1,35 @@
-movetoplay.controller('ctrl', ['$scope', 'dataSrv', function($scope, dataSrv) {
-	    // Données de jeu
-	    var id = 1;
-	    var imgUrl = "img/logo.png";
-	    var qrValue = "ludo";
+movetoplay.controller('ctrl', ['$scope', '$interval', 'qrcodeFct', 'gameFct', 'dataFct', '$ionicPlatform', function($scope, $interval, qrcodeFct, gameFct, dataFct, $ionicPlatform) {
+	   
 
-	    // Données de joueur
-	    var level = 1;
+	    //Instanciation des factories
+	    $scope.qrcodeFct = qrcodeFct;
+	    $scope.gameFct = gameFct;
+	    $scope.dataFct = dataFct;
 
-	    // Données de session
-	    var nbParti = 0;
-	    $scope.title = "";
-	    $scope.imgUrl = "";
-	    $scope.instruction = "";
-	    $scope.buttonState = "";
-
-
-	    // Initialisation des variables du scope
-	    dataSrv.init($scope.title, $scope.imgUrl, $scope.instruction, $scope.buttonState);
-
-	    // Début de partie
+	    // Déroulement du jeu
 	    $scope.startGame = function() {
-		$scope.instruction = "Déplacez-vous et scannez le QR code pour savoir si vous avez gagné";
-		$scope.imgDisplay = 25;
+	    	$scope.gameFct.startGame();
 	    };
+	   
+	   	// Scan et vérification du QR-Code
+		$scope.scanner = function() {
+			$scope.qrcodeFct.scanner();
+		};
 
-	    // Scan du QR-Code
-	    $scope.scanner = function() {
-		cordova.plugins.barcodeScanner.scan(function(res) {
-			if (res.text == qrValue)
-			    alert("Bravo, un café offert chez Ludo");
-			else
-			    alert("Désolé, ce QR-Code n'est pas le bon");
-		    }, function(res) {
-			alert("Error");
+
+		$ionicPlatform.ready(function() {
+			window.plugins.NativeAudio.preloadSimple('sound', 'audio/pignon.mp3', function(msg) {
+				alert("cool");
+			    }, function(msg) {
+				alert(msg);
+			    });
+			setTimeout(function() {
+			window.plugins.NativeAudio.play('sound', function() {
+				alert("Lecture");
+			    }, function(msg) {
+				alert(msg);
+			    });
+			    }, 2000);
 		    });
-	    };
+
 	}]);

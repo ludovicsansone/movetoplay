@@ -7,6 +7,15 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "cordova-plugin-nativeaudio": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
+        },
         "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         }

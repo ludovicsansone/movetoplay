@@ -15,6 +15,8 @@
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
+    <script src="js/ng-cordova.min.js"></script>
+
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
@@ -24,6 +26,10 @@
     <!-- your controller -->
     <script src="js/controller.js"></script>
 
+  <!-- Your factories -->
+  <script src="js/factories/qrcodeFct.js"></script>
+  <script src="js/factories/gameFct.js"></script>
+   <script src="js/factories/dataFct.js"></script>
   </head>
 
 
@@ -32,17 +38,17 @@
     <ion-pane ng-controller="ctrl">
       <ion-content>
 	<h1>
-{{title}}
+{{dataFct.title}}
 	</h1>
 	<div style="height: 350px;">
-	<div style="width: {{imgDisplay}}%; overflow: hidden;">
-	  <img ng-click="startGame()" src="{{imgUrl}}" alt="Logo boutique""/>
+	<div style="width: {{dataFct.imgDisplay}}%; overflow: hidden;">
+	  <img ng-click="startGame()" src="{{dataFct.imgUrl}}" alt="Logo boutique"/>
 	</div>
 </div>
 	<div>
-	  {{instruction}}
+	  {{dataFct.instruction}}
 	</div>
-	<button ng-click="scanner()">
+	<button ng-click="scanner()" ng-show="dataFct.scanIsActive">
 	  Scanner le QR-Code
 	</button>
       </ion-content>

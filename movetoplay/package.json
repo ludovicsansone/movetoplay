@@ -15,7 +15,11 @@
     "shelljs": "^0.3.0"
   },
   "cordovaPlugins": [
-    "com.phonegap.plugins.barcodescanner"
+    "com.phonegap.plugins.barcodescanner",
+    "cordova-plugin-media",
+    "cordova-plugin-nativeaudio"
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [
+    "ios"
+  ]
 }
