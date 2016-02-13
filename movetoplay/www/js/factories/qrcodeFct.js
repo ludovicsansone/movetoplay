@@ -12,6 +12,7 @@ movetoplay.factory('qrcodeFct', function($interval, gameFct, dataFct) {
 						dataFct.instruction = "Vous pouvez aller chercher votre cadeau ! Pour rejouer cliquez sur l’image";
 						dataFct.scanIsActive = false;
 						dataFct.imgDisplay = 100;
+						dataFct.imgUrl="img/Yes.png";
 						dataFct.isClickable = 1;
 						if (gameFct.nbLoop < 8)
 							gameFct.nbLoop += 2;
@@ -23,6 +24,7 @@ movetoplay.factory('qrcodeFct', function($interval, gameFct, dataFct) {
 						dataFct.instruction = "Pour réessayer cliquez sur l’image.";
 						dataFct.imgDisplay = 100;
 						dataFct.scanIsActive = false;
+						dataFct.imgUrl="img/No.png";
 						dataFct.isClickable = 1;
 					}
 				}
