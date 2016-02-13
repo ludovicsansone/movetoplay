@@ -5,7 +5,6 @@ movetoplay.factory('audioFct', function($ionicPlatform) {
 		    $ionicPlatform.ready(function() {
 			    window.plugins.NativeAudio.preloadSimple(id, path, function() {
 				}, function(msg) {
-				    alert(msg);
 				});
 			}); // Fin de $ionicPlatform.ready
 		    }, 500); // Fin de setTimeout

@@ -21,6 +21,7 @@ movetoplay.factory('qrcodeFct', function($interval, gameFct, dataFct, audioFct) 
 					else
 					{
 						$interval.cancel(gameFct.timer);
+						if (dataFct.isLost == 0)
 						audioFct.playSound('defaite_qrcode');
 						dataFct.title = "Désolé, ce n'est pas la bonne image. Perdu!";
 						dataFct.instruction = "Pour réessayer cliquez sur l’image.";
