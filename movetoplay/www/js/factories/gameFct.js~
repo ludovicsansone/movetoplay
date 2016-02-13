@@ -1,4 +1,4 @@
-movetoplay.factory('gameFct', function(dataFct, $interval, audioFct) {
+movetoplay.factory('gameFct', function(dataFct, $interval) {
 	return {
 		'nbLoop': 4,
 		'timer': {},
@@ -14,13 +14,10 @@ movetoplay.factory('gameFct', function(dataFct, $interval, audioFct) {
 				dataFct.isClickable = 0;
 				index += 1;
 				var nbLoop = this.nbLoop;
-				dataFct.isLost = 0;
+
 				this.timer = $interval(function() {
-					audioFct.playSound('change');
 					if (index == nbLoop - 1)
 					{
-					    audioFct.playSound('defaite_temps');
-					    dataFct.isLost = 1;
 						dataFct.title = "Merci d'avoir participé!";
 						dataFct.instruction = "Pour réessayer cliquez sur l’image.";
 						dataFct.scanIsActive = false;

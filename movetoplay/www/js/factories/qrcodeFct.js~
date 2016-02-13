@@ -7,7 +7,6 @@ movetoplay.factory('qrcodeFct', function($interval, gameFct, dataFct, audioFct) 
 					if (res.text == dataFct.qrValue)
 					{
 						$interval.cancel(gameFct.timer);
-						if (dataFct.isLost == 0)
 						audioFct.playSound('claps');
 						dataFct.title = "Bravo, vous avez gagné!";
 						dataFct.instruction = "Vous pouvez aller chercher votre cadeau ! Pour rejouer cliquez sur l’image";
