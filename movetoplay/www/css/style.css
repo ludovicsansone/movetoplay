@@ -1,1 +1,28 @@
-/* Empty. Add your own CSS if you like */
+#title
+{
+	font-family: verdana;
+	font-size:200%;
+	text-align: center;
+}
+div.title
+{
+	white-space: normal;
+	font-family: verdana;
+	font-weight:bold;
+	text-align: center;
+}
+#container
+{
+	margin-top: 20px;
+	height: 200px;
+	text-align: center;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+#brand-logo
+{
+	border:2px solid black;
+	width:auto;
+	height:200px;
+	padding:10px;
+}
