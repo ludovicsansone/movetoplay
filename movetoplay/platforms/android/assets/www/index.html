@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<title></title>
+
+	<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+	<link href="css/ionic.app.css" rel="stylesheet">
+	-->
+
+	<!-- ionic/angularjs js -->
+	<script src="lib/ionic/js/ionic.bundle.js"></script>
+
+	<script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+	<script src="lib/angular-translate/angular-translate.min.js"></script>
+	<!-- cordova script (this will be a 404 during development) -->
+	<script src="cordova.js"></script>
+
+	<!-- your app's js -->
+	<script src="js/app.js"></script>
+
+	<!-- your controller -->
+	<script src="js/controller.js"></script>
+
+	<!-- Your factories -->
+	<script src="js/factories/qrcodeFct.js"></script>
+	<script src="js/factories/gameFct.js"></script>
+	<script src="js/factories/dataFct.js"></script>
+	<script src="js/factories/audioFct.js"></script>
+
+	<script src="js/translation.js"></script>
+  </head>
+  
+
+  <body ng-app="movetoplay" class="platform-android platform-cordova platform-webview">
+	
+	<ion-pane ng-controller="ctrl">
+		<ion-content>
+<!-- 			<div class="title">
+				<h1 id="title">{{dataFct.title}}</h1>
+			</div> -->
+			<div class="card title">
+				<div class="item title item-text-wrap">
+			    {{dataFct.title | translate}}
+			  	</div>
+			</div>
+			<div id="container">
+			  <div style="width: {{dataFct.imgDisplay}}%; overflow: hidden;">
+				<img id="brand-logo" ng-click="startGame()" src="{{dataFct.imgUrl}}" alt="{{'MTP_LOGO_ALT' | translate}}"/>
+			  </div>
+			</div>
+			<div class="card title">
+				<div class="item title item-text-wrap">
+			    {{dataFct.instruction | translate}}
+			  	</div>
+			</div>
+			<div>
+			  <button class="button button-full button-positive" ng-click="scanner()" ng-show="dataFct.scanIsActive">
+				{{'MTP_SCAN_QRCODE_BUTTON' | translate}}
+			  </button>
+			  <button class="button button-full button-assertive" ng-click="scanBeacons()">
+				Click here to scan beacons
+			  </button>
+			</div>	
+		</ion-content>
+	</ion-pane>
+  </body>
+</html>

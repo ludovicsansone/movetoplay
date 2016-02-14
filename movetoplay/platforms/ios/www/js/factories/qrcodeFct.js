@@ -1,18 +1,19 @@
-movetoplay.factory('qrcodeFct', function($interval, gameFct, dataFct) {
+movetoplay.factory('qrcodeFct', function($interval, $translate, gameFct, dataFct, audioFct) {
 	return {
 		'scanner': function() {
-			// alert("ok for scan");
 			cordova.plugins.barcodeScanner.scan(function(res) {
 				if (res.text)
 				{
 					if (res.text == dataFct.qrValue)
 					{
 						$interval.cancel(gameFct.timer);
-						dataFct.title = "Bravo, vous avez gagné!";
-						dataFct.instruction = "Vous pouvez aller chercher votre cadeau ! Pour rejouer cliquez sur l’image";
+						if (dataFct.isLost == 0)
+						audioFct.playSound('claps');
+						dataFct.title = "MTP_TITLE_WIN";
+						dataFct.instruction = "MTP_INSTRUCTION_WIN";
 						dataFct.scanIsActive = false;
 						dataFct.imgDisplay = 100;
-						dataFct.imgUrl = "img/Yes.png";
+						dataFct.imgUrl="img/Yes.png";
 						dataFct.isClickable = 1;
 						if (gameFct.nbLoop < 8)
 							gameFct.nbLoop += 2;
@@ -20,16 +21,22 @@ movetoplay.factory('qrcodeFct', function($interval, gameFct, dataFct) {
 					else
 					{
 						$interval.cancel(gameFct.timer);
-						dataFct.title = "Désolé, ce n'est pas la bonne image. Perdu!";
-						dataFct.instruction = "Pour réessayer cliquez sur l’image.";
+						if (dataFct.isLost == 0)
+						audioFct.playSound('defaite_qrcode');
+						dataFct.title = "MTP_TITLE_LOSE_BADQRC";
+						dataFct.instruction = "MTP_INSTRUCTION_LOSE_BADQRC";
 						dataFct.imgDisplay = 100;
 						dataFct.scanIsActive = false;
-						dataFct.imgUrl = "img/No.png";
+						dataFct.imgUrl="img/No.png";
 						dataFct.isClickable = 1;
 					}
 				}
 				else
-					alert("QR-Code non reconnu. Veuillez réessayer");
+				{ 
+					$translate('MTP_ALERT_INVALIDQRC').then(function(res) {
+			    		alert(res);
+			    	})
+				}
 			}, function(res) {
 				alert("Erreur");
 			});

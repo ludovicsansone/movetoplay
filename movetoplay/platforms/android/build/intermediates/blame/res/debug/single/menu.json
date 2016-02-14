@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/res/merged/debug/menu/encode.xml",
+        "source": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/res/menu/encode.xml"
+    },
+    {
+        "merged": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/res/merged/debug/menu/capture.xml",
+        "source": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/res/menu/capture.xml"
+    },
+    {
+        "merged": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/res/merged/debug/menu/history.xml",
+        "source": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/res/menu/history.xml"
+    }
+]

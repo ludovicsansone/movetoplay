@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/launcher_icon.png",
+        "source": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/res/drawable-xxhdpi/launcher_icon.png"
+    },
+    {
+        "merged": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/icon.png",
+        "source": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/res/drawable-xxhdpi/icon.png"
+    }
+]

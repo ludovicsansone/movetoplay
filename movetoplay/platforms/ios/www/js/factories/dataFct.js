@@ -1,11 +1,12 @@
 movetoplay.factory('dataFct', function() {
 	return {
-		'title': "Trouvez l'image mystère autour de vous",
+		'title': 'MTP_TITLE_INITIAL',
 		'imgUrl': "img/default.png",
 		'imgDisplay': 100,
-		'instruction': "Cliquez sur l'image pour commencer le jeu",
+		'instruction': 'MTP_INSTRUCTION_INITIAL',
 		'scanIsActive': false,
 		'qrValue': "ludo",
-		'isClickable': 1
+		    'isClickable': 1,
+		    'isLost': 0
 	}
 });

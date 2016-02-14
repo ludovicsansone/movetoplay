@@ -204,6 +204,84 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.barcodeScanner"
         ]
+    },
+    {
+        "file": "plugins/eu.mobilion.ibeacon/www/ibeacon.js",
+        "id": "eu.mobilion.ibeacon.ibeacon",
+        "pluginId": "eu.mobilion.ibeacon",
+        "clobbers": [
+            "ibeacon"
+        ]
+    },
+    {
+        "file": "plugins/eu.mobilion.ibeacon/www/region.js",
+        "id": "eu.mobilion.ibeacon.region",
+        "pluginId": "eu.mobilion.ibeacon"
+    },
+    {
+        "file": "plugins/eu.mobilion.ibeacon/www/beacon.js",
+        "id": "eu.mobilion.ibeacon.beacon",
+        "pluginId": "eu.mobilion.ibeacon"
+    },
+    {
+        "file": "plugins/eu.mobilion.ibeacon/www/helper.js",
+        "id": "eu.mobilion.ibeacon.helper",
+        "pluginId": "eu.mobilion.ibeacon"
+    },
+    {
+        "file": "plugins/eu.mobilion.ibeacon/www/defaults.js",
+        "id": "eu.mobilion.ibeacon.defaults",
+        "pluginId": "eu.mobilion.ibeacon"
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/lib/underscore-min-1.6.js",
+        "id": "com.unarin.cordova.beacon.underscorejs",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/lib/q.min.js",
+        "id": "com.unarin.cordova.beacon.Q",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/LocationManager.js",
+        "id": "com.unarin.cordova.beacon.LocationManager",
+        "pluginId": "com.unarin.cordova.beacon",
+        "merges": [
+            "cordova.plugins"
+        ]
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/Delegate.js",
+        "id": "com.unarin.cordova.beacon.Delegate",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/model/Region.js",
+        "id": "com.unarin.cordova.beacon.Region",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/Regions.js",
+        "id": "com.unarin.cordova.beacon.Regions",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/model/CircularRegion.js",
+        "id": "com.unarin.cordova.beacon.CircularRegion",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.unarin.cordova.beacon/www/model/BeaconRegion.js",
+        "id": "com.unarin.cordova.beacon.BeaconRegion",
+        "pluginId": "com.unarin.cordova.beacon",
+        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -212,7 +290,9 @@ module.exports.metadata =
     "cordova-plugin-file": "4.1.1",
     "cordova-plugin-media": "2.2.0",
     "cordova-plugin-nativeaudio": "3.0.6",
-    "phonegap-plugin-barcodescanner": "4.1.0"
+    "phonegap-plugin-barcodescanner": "4.1.0",
+    "eu.mobilion.ibeacon": "0.0.0",
+    "com.unarin.cordova.beacon": "3.3.0"
 }
 // BOTTOM OF METADATA
 });

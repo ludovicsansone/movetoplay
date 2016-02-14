@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/res/merged/debug/layout-land/share.xml",
+        "source": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/res/layout-land/share.xml"
+    },
+    {
+        "merged": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/res/merged/debug/layout-land/encode.xml",
+        "source": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/res/layout-land/encode.xml"
+    }
+]

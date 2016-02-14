@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/res/merged/debug/drawable-hdpi-v4/launcher_icon.png",
+        "source": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/res/drawable-hdpi/launcher_icon.png"
+    },
+    {
+        "merged": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/res/merged/debug/drawable-hdpi-v4/shopper_icon.png",
+        "source": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/res/drawable-hdpi/shopper_icon.png"
+    },
+    {
+        "merged": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon.png",
+        "source": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/res/drawable-hdpi/icon.png"
+    }
+]

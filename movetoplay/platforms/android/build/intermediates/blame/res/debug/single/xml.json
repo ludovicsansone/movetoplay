@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/res/merged/debug/xml/config.xml",
+        "source": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/res/xml/config.xml"
+    },
+    {
+        "merged": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/res/merged/debug/xml/preferences.xml",
+        "source": "/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/res/xml/preferences.xml"
+    }
+]

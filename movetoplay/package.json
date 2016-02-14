@@ -17,9 +17,12 @@
   "cordovaPlugins": [
     "com.phonegap.plugins.barcodescanner",
     "cordova-plugin-media",
-    "cordova-plugin-nativeaudio"
+    "cordova-plugin-nativeaudio",
+    "eu.mobilion.ibeacon",
+    "com.unarin.cordova.beacon"
   ],
   "cordovaPlatforms": [
-    "ios"
+    "ios",
+    "android"
   ]
 }

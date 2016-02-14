@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/libs/AndroidIBeaconLibrary-0.7.7.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="7020d950990e19618197754717448e60b06f74fa">
+        <dex dex="/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/pre-dexed/debug/AndroidIBeaconLibrary-0.7.7_bcd3601155f4b0aa81fc381a7a2907f07be9ddca.jar" />
+    </item>
+    <item
+        jar="/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/libs/com.google.zxing.client.android.captureactivity.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="92d1409f739c4ebcfbab79b2a11ec63d1bf668f5">
+        <dex dex="/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/pre-dexed/debug/com.google.zxing.client.android.captureactivity_59952c1977fa7d6f786bb9eecd585e553aaf4c6d.jar" />
+    </item>
+    <item
+        jar="/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/libs/altbeacon.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="cf8e282e7c1cdf175467ed2b40a358a271cda953">
+        <dex dex="/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/pre-dexed/debug/altbeacon_b45c25bb2ad0017714b0d0397735fa3dabd40649.jar" />
+    </item>
+    <item
+        jar="/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="fd1be8d1540cf284bc66eddfdcdcbd385d4ad563">
+        <dex dex="/Users/bill_rousseau/movetoplay/movetoplay/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-unspecified-debug_c351eceef540492ccb40f5c05b8bfbcc1ed39978.jar" />
+    </item>
+
+</items>
