@@ -1,4 +1,4 @@
-movetoplay.controller('ctrl', ['$scope', '$interval', 'qrcodeFct', 'gameFct', 'dataFct', 'audioFct', function($scope, $interval, qrcodeFct, gameFct, dataFct, audioFct) {
+movetoplay.controller('ctrl', ['$scope', '$interval', '$translate', 'qrcodeFct', 'gameFct', 'dataFct', 'audioFct', function($scope, $interval, $translate, qrcodeFct, gameFct, dataFct, audioFct) {
 	   
 	    //Instanciation des factories
 	    $scope.qrcodeFct = qrcodeFct;
@@ -6,11 +6,28 @@ movetoplay.controller('ctrl', ['$scope', '$interval', 'qrcodeFct', 'gameFct', 'd
 	    $scope.dataFct = dataFct;
 	    $scope.audioFct = audioFct;
 
-	    // Déroulement du jeu
+
+	   	// Déroulement du jeu
 	    $scope.startGame = function() {
 	    	$scope.gameFct.startGame();
 	    };
-	   
+
+	    $scope.scanBeacons = function() {
+	    	var proximityUUID= "19841986-1992-1995-2016-423323332442";
+	    	var minor = 1;
+	    	var major = 8128;
+
+	    	var mtpRegion = new ibeacon.Region({
+	    		uuid: proximityUUID
+	    	});
+
+	    	ibeacon.startRangingBeaconsInRegion({
+	    		region: mtpRegion,
+	    		didRangeBeacons: function(result) {
+	    			alert(result.beacons[0].rssi);
+	    		}
+	    	})
+	    }
 	   	// Scan et vérification du QR-Code
 		$scope.scanner = function() {
 			$scope.qrcodeFct.scanner();

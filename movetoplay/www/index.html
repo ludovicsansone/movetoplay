@@ -16,7 +16,7 @@
 	<script src="lib/ionic/js/ionic.bundle.js"></script>
 
 	<script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
-
+	<script src="lib/angular-translate/angular-translate.min.js"></script>
 	<!-- cordova script (this will be a 404 during development) -->
 	<script src="cordova.js"></script>
 
@@ -45,22 +45,25 @@
 			</div> -->
 			<div class="card title">
 				<div class="item title item-text-wrap">
-			    {{dataFct.title}}
+			    {{dataFct.title | translate}}
 			  	</div>
 			</div>
 			<div id="container">
 			  <div style="width: {{dataFct.imgDisplay}}%; overflow: hidden;">
-				<img id="brand-logo" ng-click="startGame()" src="{{dataFct.imgUrl}}" alt="Logo boutique"/>
+				<img id="brand-logo" ng-click="startGame()" src="{{dataFct.imgUrl}}" alt="{{'MTP_LOGO_ALT' | translate}}"/>
 			  </div>
 			</div>
 			<div class="card title">
 				<div class="item title item-text-wrap">
-			    {{dataFct.instruction}}
+			    {{dataFct.instruction | translate}}
 			  	</div>
 			</div>
 			<div>
 			  <button class="button button-full button-positive" ng-click="scanner()" ng-show="dataFct.scanIsActive">
-				Scanner le QR-Code
+				{{'MTP_SCAN_QRCODE_BUTTON' | translate}}
+			  </button>
+			  <button class="button button-full button-assertive" ng-click="scanBeacons()">
+				Click here to scan beacons
 			  </button>
 			</div>	
 		</ion-content>
