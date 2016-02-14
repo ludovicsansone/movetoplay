@@ -26,8 +26,18 @@ movetoplay.controller('ctrl', ['$scope', '$interval', '$translate', 'qrcodeFct',
 
 	$scope.scanBeacons = function() {
 		var region = createBeacon();
-		for (item in region)
-			alert(item);
+		var delegate = new cordova.plugins.locationManager.Delegate();
+		cordova.plugins.locationManager.setDelegate(delegate);
+		cordova.plugins.locationManager.requestWhenInUseAuthorization();
+		cordova.plugins.locationManager.startMonitoringForRegion(region)
+		.done(function() {
+			alert("SUCCESS");
+		})
+		.fail(function() {
+			alert("ERROR");
+		})
+		// for (item in region)
+		// 	alert(item);
 	};
 
    	// Scan et vérification du QR-Code
