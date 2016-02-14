@@ -14,9 +14,9 @@ movetoplay.controller('ctrl', ['$scope', '$interval', '$translate', 'qrcodeFct',
 
 	    $scope.scanBeacons = function() {
 	    	var proximityUUID= "19841986-1992-1995-2016-423323332442";
+	    	var identifier = "Move To Play";
 	    	var minor = 1;
 	    	var major = 8128;
-
 	    	var mtpRegion = new ibeacon.Region({
 	    		uuid: proximityUUID
 	    	});
