@@ -206,34 +206,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/eu.mobilion.ibeacon/www/ibeacon.js",
-        "id": "eu.mobilion.ibeacon.ibeacon",
-        "pluginId": "eu.mobilion.ibeacon",
-        "clobbers": [
-            "ibeacon"
-        ]
-    },
-    {
-        "file": "plugins/eu.mobilion.ibeacon/www/region.js",
-        "id": "eu.mobilion.ibeacon.region",
-        "pluginId": "eu.mobilion.ibeacon"
-    },
-    {
-        "file": "plugins/eu.mobilion.ibeacon/www/beacon.js",
-        "id": "eu.mobilion.ibeacon.beacon",
-        "pluginId": "eu.mobilion.ibeacon"
-    },
-    {
-        "file": "plugins/eu.mobilion.ibeacon/www/helper.js",
-        "id": "eu.mobilion.ibeacon.helper",
-        "pluginId": "eu.mobilion.ibeacon"
-    },
-    {
-        "file": "plugins/eu.mobilion.ibeacon/www/defaults.js",
-        "id": "eu.mobilion.ibeacon.defaults",
-        "pluginId": "eu.mobilion.ibeacon"
-    },
-    {
         "file": "plugins/com.unarin.cordova.beacon/www/lib/underscore-min-1.6.js",
         "id": "com.unarin.cordova.beacon.underscorejs",
         "pluginId": "com.unarin.cordova.beacon",
@@ -291,7 +263,6 @@ module.exports.metadata =
     "cordova-plugin-media": "2.2.0",
     "cordova-plugin-nativeaudio": "3.0.6",
     "phonegap-plugin-barcodescanner": "4.1.0",
-    "eu.mobilion.ibeacon": "0.0.0",
     "com.unarin.cordova.beacon": "3.3.0"
 }
 // BOTTOM OF METADATA

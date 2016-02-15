@@ -7,5 +7,5 @@
     "QuartzCore.framework": 1,
     "CoreImage.framework": 1,
     "CoreBluetooth.framework": 2,
-    "CoreLocation.framework": 1
+    "CoreLocation.framework": 2
 }

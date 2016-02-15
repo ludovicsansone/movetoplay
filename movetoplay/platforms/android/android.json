@@ -13,10 +13,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"LocationManager\"><param name=\"android-package\" value=\"com.unarin.cordova.beacon.LocationManager\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
@@ -29,7 +25,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"IBeaconPlugin\"><param name=\"android-package\" value=\"eu.mobilion.ibeacon.IBeaconPlugin\" /></feature>",
+                            "xml": "<feature name=\"LocationManager\"><param name=\"android-package\" value=\"com.unarin.cordova.beacon.LocationManager\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -61,14 +57,6 @@
                         {
                             "xml": "<service android:enabled=\"true\" android:name=\"org.altbeacon.beacon.BeaconIntentProcessor\"><meta-data android:name=\"background\" android:value=\"true\" /><intent-filter android:priority=\"1\"><action android:name=\"com.unarin.cordova.beacon.IBeaconPlugin.DID_RANGING\" /><action android:name=\"com.unarin.cordova.beacon.IBeaconPlugin.DID_MONITORING\" /></intent-filter></service>",
                             "count": 1
-                        },
-                        {
-                            "xml": "<service android:name=\"com.radiusnetworks.ibeacon.service.IBeaconService\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<service android:name=\"com.radiusnetworks.ibeacon.IBeaconIntentProcessor\" />",
-                            "count": 1
                         }
                     ],
                     "/manifest": [
@@ -86,11 +74,11 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH\" />",
-                            "count": 2
+                            "count": 1
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\" />",
-                            "count": 2
+                            "count": 1
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
@@ -605,9 +593,6 @@
         "com.phonegap.plugins.barcodescanner": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
-        "com.unarin.cordova.beacon": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
-        },
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
@@ -617,7 +602,7 @@
         "cordova-plugin-nativeaudio": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
-        "eu.mobilion.ibeacon": {
+        "com.unarin.cordova.beacon": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         }
     },
@@ -629,48 +614,6 @@
             "clobbers": [
                 "cordova.plugins.barcodeScanner"
             ]
-        },
-        {
-            "file": "plugins/com.unarin.cordova.beacon/www/lib/underscore-min-1.6.js",
-            "id": "com.unarin.cordova.beacon.underscorejs",
-            "runs": true
-        },
-        {
-            "file": "plugins/com.unarin.cordova.beacon/www/lib/q.min.js",
-            "id": "com.unarin.cordova.beacon.Q",
-            "runs": true
-        },
-        {
-            "file": "plugins/com.unarin.cordova.beacon/www/LocationManager.js",
-            "id": "com.unarin.cordova.beacon.LocationManager",
-            "merges": [
-                "cordova.plugins"
-            ]
-        },
-        {
-            "file": "plugins/com.unarin.cordova.beacon/www/Delegate.js",
-            "id": "com.unarin.cordova.beacon.Delegate",
-            "runs": true
-        },
-        {
-            "file": "plugins/com.unarin.cordova.beacon/www/model/Region.js",
-            "id": "com.unarin.cordova.beacon.Region",
-            "runs": true
-        },
-        {
-            "file": "plugins/com.unarin.cordova.beacon/www/Regions.js",
-            "id": "com.unarin.cordova.beacon.Regions",
-            "runs": true
-        },
-        {
-            "file": "plugins/com.unarin.cordova.beacon/www/model/CircularRegion.js",
-            "id": "com.unarin.cordova.beacon.CircularRegion",
-            "runs": true
-        },
-        {
-            "file": "plugins/com.unarin.cordova.beacon/www/model/BeaconRegion.js",
-            "id": "com.unarin.cordova.beacon.BeaconRegion",
-            "runs": true
         },
         {
             "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
@@ -845,27 +788,46 @@
             ]
         },
         {
-            "file": "plugins/eu.mobilion.ibeacon/www/ibeacon.js",
-            "id": "eu.mobilion.ibeacon.ibeacon",
-            "clobbers": [
-                "ibeacon"
+            "file": "plugins/com.unarin.cordova.beacon/www/lib/underscore-min-1.6.js",
+            "id": "com.unarin.cordova.beacon.underscorejs",
+            "runs": true
+        },
+        {
+            "file": "plugins/com.unarin.cordova.beacon/www/lib/q.min.js",
+            "id": "com.unarin.cordova.beacon.Q",
+            "runs": true
+        },
+        {
+            "file": "plugins/com.unarin.cordova.beacon/www/LocationManager.js",
+            "id": "com.unarin.cordova.beacon.LocationManager",
+            "merges": [
+                "cordova.plugins"
             ]
         },
         {
-            "file": "plugins/eu.mobilion.ibeacon/www/region.js",
-            "id": "eu.mobilion.ibeacon.region"
+            "file": "plugins/com.unarin.cordova.beacon/www/Delegate.js",
+            "id": "com.unarin.cordova.beacon.Delegate",
+            "runs": true
         },
         {
-            "file": "plugins/eu.mobilion.ibeacon/www/beacon.js",
-            "id": "eu.mobilion.ibeacon.beacon"
+            "file": "plugins/com.unarin.cordova.beacon/www/model/Region.js",
+            "id": "com.unarin.cordova.beacon.Region",
+            "runs": true
         },
         {
-            "file": "plugins/eu.mobilion.ibeacon/www/helper.js",
-            "id": "eu.mobilion.ibeacon.helper"
+            "file": "plugins/com.unarin.cordova.beacon/www/Regions.js",
+            "id": "com.unarin.cordova.beacon.Regions",
+            "runs": true
         },
         {
-            "file": "plugins/eu.mobilion.ibeacon/www/defaults.js",
-            "id": "eu.mobilion.ibeacon.defaults"
+            "file": "plugins/com.unarin.cordova.beacon/www/model/CircularRegion.js",
+            "id": "com.unarin.cordova.beacon.CircularRegion",
+            "runs": true
+        },
+        {
+            "file": "plugins/com.unarin.cordova.beacon/www/model/BeaconRegion.js",
+            "id": "com.unarin.cordova.beacon.BeaconRegion",
+            "runs": true
         }
     ]
 }

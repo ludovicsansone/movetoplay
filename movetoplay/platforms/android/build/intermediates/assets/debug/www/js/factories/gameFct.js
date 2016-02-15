@@ -9,7 +9,7 @@ movetoplay.factory('gameFct', function(dataFct, $interval, $translate, audioFct)
 				dataFct.imgUrl = "img/logo.png";
 				dataFct.scanIsActive = true;
 				dataFct.imgDisplay = 100 / this.nbLoop;
-				dataFct.title ='MTP_TITLE_INITIAL';
+				dataFct.title ='MTP_TITLE_THROUGH';
 				dataFct.instruction = 'MTP_INSTRUCTION_THROUGH';
 				dataFct.isClickable = 0;
 				index += 1;
@@ -25,20 +25,17 @@ movetoplay.factory('gameFct', function(dataFct, $interval, $translate, audioFct)
 						dataFct.instruction = "MTP_INSTRUCTION_LOSE_TIMEOUT";
 						dataFct.scanIsActive = false;
 						dataFct.imgDisplay = 100;
-						dataFct.imgUrl="img/No.png";
+						dataFct.imgUrl="img/smiley-triste.png";
 						dataFct.isClickable = 1;
-						$translate('MTP_ALERT_INVALIDQRC').then(function(res) {
-				    		alert(res);
-				    	});
 					}
 					else
 					{
-						dataFct.title = 'MTP_TITLE_THROUGH';
+						dataFct.title = 'MTP_TITLE_THROUGH_BIS';
 						dataFct.instruction = 'MTP_INSTRUCTION_THROUGH_BIS';
 						dataFct.imgDisplay += (100 / nbLoop);
 						index += 1;
 					}
-				}, 3000, nbLoop - 1);
+				}, 30000, nbLoop - 1);
 				dataFct.isClickable = isClickable;
 			}
 		}

@@ -13,7 +13,7 @@ movetoplay.factory('qrcodeFct', function($interval, $translate, gameFct, dataFct
 						dataFct.instruction = "MTP_INSTRUCTION_WIN";
 						dataFct.scanIsActive = false;
 						dataFct.imgDisplay = 100;
-						dataFct.imgUrl="img/Yes.png";
+						dataFct.imgUrl="img/Cadeau.png";
 						dataFct.isClickable = 1;
 						if (gameFct.nbLoop < 8)
 							gameFct.nbLoop += 2;
@@ -27,7 +27,7 @@ movetoplay.factory('qrcodeFct', function($interval, $translate, gameFct, dataFct
 						dataFct.instruction = "MTP_INSTRUCTION_LOSE_BADQRC";
 						dataFct.imgDisplay = 100;
 						dataFct.scanIsActive = false;
-						dataFct.imgUrl="img/No.png";
+						dataFct.imgUrl="img/smiley-triste.png";
 						dataFct.isClickable = 1;
 					}
 				}

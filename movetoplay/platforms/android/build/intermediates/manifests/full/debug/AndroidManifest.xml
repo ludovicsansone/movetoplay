@@ -25,13 +25,13 @@
         android:name="android.hardware.camera"
         android:required="false" />
 
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:hardwareAccelerated="true"
@@ -110,8 +110,6 @@
                 <action android:name="com.unarin.cordova.beacon.IBeaconPlugin.DID_MONITORING" />
             </intent-filter>
         </service>
-        <service android:name="com.radiusnetworks.ibeacon.service.IBeaconService" />
-        <service android:name="com.radiusnetworks.ibeacon.IBeaconIntentProcessor" />
     </application>
 
 </manifest>

@@ -17,6 +17,7 @@
 
 	<script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
 	<script src="lib/angular-translate/angular-translate.min.js"></script>
+	<script src="lib/ng-cordova-beacon/dist/ng-cordova-beacon.min.js"></script>
 	<!-- cordova script (this will be a 404 during development) -->
 	<script src="cordova.js"></script>
 
@@ -44,8 +45,8 @@
 				<h1 id="title">{{dataFct.title}}</h1>
 			</div> -->
 			<div class="card title">
-				<div class="item title item-text-wrap">
-			    {{dataFct.title | translate}}
+				<div class="item title">
+				    {{dataFct.title | translate}}
 			  	</div>
 			</div>
 			<div id="container">
@@ -61,9 +62,6 @@
 			<div>
 			  <button class="button button-full button-positive" ng-click="scanner()" ng-show="dataFct.scanIsActive">
 				{{'MTP_SCAN_QRCODE_BUTTON' | translate}}
-			  </button>
-			  <button class="button button-full button-assertive" ng-click="scanBeacons()">
-				Click here to scan beacons
 			  </button>
 			</div>	
 		</ion-content>

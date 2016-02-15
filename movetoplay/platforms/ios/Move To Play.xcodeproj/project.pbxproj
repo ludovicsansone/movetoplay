@@ -56,12 +56,11 @@
 		EB93BA00728E4B39BE3871B9 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F782D3A3234CC4B571BC20 /* CoreVideo.framework */; };
 		F0132F82DE7C4FB69876E5BA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C155445C98DF4F40A691B14B /* QuartzCore.framework */; };
 		82F5B62CEDFC44AAA3898403 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CA094DD81543AD82F2DB1A /* CoreImage.framework */; };
-		083D0DEB268348F4973C97D5 /* IBeaconPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 074320975B2346F9B48BE599 /* IBeaconPlugin.m */; };
 		24E5148E72604E8D82722F24 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A08F5F9647A4F10B307C1C9 /* CoreBluetooth.framework */; };
-		CA02B299C3364F71B54C18BB /* CDVLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15176D18454B1F8BE3DCFD /* CDVLocationManager.m */; };
-		55267DCA5C5E4F6887CC78EE /* AppDelegate+CDVLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD50EA5F59742A0A1C76031 /* AppDelegate+CDVLocationManager.m */; };
-		6CA0C3419AAF4C0384A2A195 /* LMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C564D58DBA12403E909DDB6C /* LMLogger.m */; };
 		627C44E5BDA247B3956FB532 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6805CE602EBE40A884752543 /* CoreLocation.framework */; };
+		B703B7821B4F41F38EBFD4C0 /* CDVLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB2240EC761409CAA8E35B3 /* CDVLocationManager.m */; };
+		44479A55B9C44D83AD69D9FC /* AppDelegate+CDVLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF673DFCC630460998FAAD2D /* AppDelegate+CDVLocationManager.m */; };
+		91C9D24171754056896DC282 /* LMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E9921DE34DEB455782428AB1 /* LMLogger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,16 +150,14 @@
 		A7F782D3A3234CC4B571BC20 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreVideo.framework"; path = "System/Library/Frameworks/CoreVideo.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		C155445C98DF4F40A691B14B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		29CA094DD81543AD82F2DB1A /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreImage.framework"; path = "System/Library/Frameworks/CoreImage.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
-		074320975B2346F9B48BE599 /* IBeaconPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "IBeaconPlugin.m"; path = "eu.mobilion.ibeacon/IBeaconPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		826E4EE525C74928AD763874 /* IBeaconPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "IBeaconPlugin.h"; path = "eu.mobilion.ibeacon/IBeaconPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		1A08F5F9647A4F10B307C1C9 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreBluetooth.framework"; path = "System/Library/Frameworks/CoreBluetooth.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
-		6F15176D18454B1F8BE3DCFD /* CDVLocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLocationManager.m"; path = "com.unarin.cordova.beacon/CDVLocationManager.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		BAD50EA5F59742A0A1C76031 /* AppDelegate+CDVLocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+CDVLocationManager.m"; path = "com.unarin.cordova.beacon/AppDelegate+CDVLocationManager.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		C564D58DBA12403E909DDB6C /* LMLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "LMLogger.m"; path = "com.unarin.cordova.beacon/LMLogger.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		46A7AA13707B4EE7A4E4B6C4 /* CDVLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocationManager.h"; path = "com.unarin.cordova.beacon/CDVLocationManager.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		A8E76617BAF446AEAC089CEE /* AppDelegate+CDVLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+CDVLocationManager.h"; path = "com.unarin.cordova.beacon/AppDelegate+CDVLocationManager.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		C0EB3FD30EE2467D9E7311F0 /* LMLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "LMLogger.h"; path = "com.unarin.cordova.beacon/LMLogger.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		6805CE602EBE40A884752543 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		5DB2240EC761409CAA8E35B3 /* CDVLocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLocationManager.m"; path = "com.unarin.cordova.beacon/CDVLocationManager.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		BF673DFCC630460998FAAD2D /* AppDelegate+CDVLocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+CDVLocationManager.m"; path = "com.unarin.cordova.beacon/AppDelegate+CDVLocationManager.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		E9921DE34DEB455782428AB1 /* LMLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "LMLogger.m"; path = "com.unarin.cordova.beacon/LMLogger.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		91F5977ED12846D0B6ED64C0 /* CDVLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocationManager.h"; path = "com.unarin.cordova.beacon/CDVLocationManager.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		6909171A1E24476D8EAEA3B8 /* AppDelegate+CDVLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+CDVLocationManager.h"; path = "com.unarin.cordova.beacon/AppDelegate+CDVLocationManager.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		A39CCE1F0C5045059B7B23EB /* LMLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "LMLogger.h"; path = "com.unarin.cordova.beacon/LMLogger.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,14 +291,12 @@
 				0E6D5CCD619B4CEAAA82F42D /* CDVBarcodeScanner.mm */,
 				2C70D0D8578D4613A1A86EB5 /* zxing-all-in-one.cpp */,
 				9432B776A9F14CCA8F9F64FC /* zxing-all-in-one.h */,
-				074320975B2346F9B48BE599 /* IBeaconPlugin.m */,
-				826E4EE525C74928AD763874 /* IBeaconPlugin.h */,
-				6F15176D18454B1F8BE3DCFD /* CDVLocationManager.m */,
-				BAD50EA5F59742A0A1C76031 /* AppDelegate+CDVLocationManager.m */,
-				C564D58DBA12403E909DDB6C /* LMLogger.m */,
-				46A7AA13707B4EE7A4E4B6C4 /* CDVLocationManager.h */,
-				A8E76617BAF446AEAC089CEE /* AppDelegate+CDVLocationManager.h */,
-				C0EB3FD30EE2467D9E7311F0 /* LMLogger.h */,
+				5DB2240EC761409CAA8E35B3 /* CDVLocationManager.m */,
+				BF673DFCC630460998FAAD2D /* AppDelegate+CDVLocationManager.m */,
+				E9921DE34DEB455782428AB1 /* LMLogger.m */,
+				91F5977ED12846D0B6ED64C0 /* CDVLocationManager.h */,
+				6909171A1E24476D8EAEA3B8 /* AppDelegate+CDVLocationManager.h */,
+				A39CCE1F0C5045059B7B23EB /* LMLogger.h */,
 			);
 			name = Plugins;
 			path = "Move To Play/Plugins";
@@ -496,10 +491,9 @@
 				9BC1B7DE0E6C4ABEBE72143D /* NativeAudioAsset.m in Sources */,
 				BE3E407F710F4E709695DF02 /* CDVBarcodeScanner.mm in Resources */,
 				CB16A03F6A71402EB8DBEA1F /* zxing-all-in-one.cpp in Resources */,
-				083D0DEB268348F4973C97D5 /* IBeaconPlugin.m in Sources */,
-				CA02B299C3364F71B54C18BB /* CDVLocationManager.m in Sources */,
-				55267DCA5C5E4F6887CC78EE /* AppDelegate+CDVLocationManager.m in Sources */,
-				6CA0C3419AAF4C0384A2A195 /* LMLogger.m in Sources */,
+				B703B7821B4F41F38EBFD4C0 /* CDVLocationManager.m in Sources */,
+				44479A55B9C44D83AD69D9FC /* AppDelegate+CDVLocationManager.m in Sources */,
+				91C9D24171754056896DC282 /* LMLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
